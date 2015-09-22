@@ -3,14 +3,14 @@
  */
 public class RungeKutt {
     public static void main(String[] args) {
-        double a = 0, b = 2;
-        double x0 = 0, y0_1 = 0, y0_2 = 0, y0_3 = 0, h=0.01,
+        double a = 1, b = 3;
+        double x0 = 1, y0_1 = 2, y0_2 = 2, y0_3 = 2, h=0.01,
                 x1=0, y1_1=0, y1_2=0, y1_3=0;
-        for(double i=0;i<b;i+=h){
+        for(double i=0;i<b-1;i+=h){
             x1 = x0+h;
-            y1_1 = rungekutt1(h, y0_1, x1);
-            y1_2 = rungekutt3(h, x1, y0_2);
-            y1_3 = rungekutt4(h, x1, y0_3);
+            y1_1 = rungekutt1(h, y0_1, x0);
+            y1_2 = rungekutt3(h, x0, y0_2);
+            y1_3 = rungekutt4(h, x0, y0_3);
             System.out.printf("%f %f %f %f %f \n",x1,y1_1,y1_2,y1_3,calc(x1));
             x0 = x1;
             y0_1 = y1_1;
@@ -45,7 +45,7 @@ public class RungeKutt {
         return 2 * (y0 / x0 + Math.pow(x0, 3));
     }
     public static double calc(double x0){
-        return Math.pow(x0,2)+Math.pow(x0,4);
+        return x0*x0+x0*x0*x0*x0;
     }
 
 }
