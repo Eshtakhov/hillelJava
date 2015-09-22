@@ -8,10 +8,10 @@ public class RungeKutt {
                 x1=0, y1_1=0, y1_2=0, y1_3=0;
         for(double i=0;i<b;i+=h){
             x1 = x0+h;
-            y1_1 = rungekutt1(h, y0_1, x0);
-            y1_2 = rungekutt3(h, x0, y0_2);
-            y1_3 = rungekutt4(h, x0, y0_3);
-            System.out.println(x1+' '+y1_1+' '+y1_2+' '+y1_3+' '+calc(x1));
+            y1_1 = rungekutt1(h, y0_1, x1);
+            y1_2 = rungekutt3(h, x1, y0_2);
+            y1_3 = rungekutt4(h, x1, y0_3);
+            System.out.printf("%f %f %f %f %f \n",x1,y1_1,y1_2,y1_3,calc(x1));
             x0 = x1;
             y0_1 = y1_1;
             y0_2 = y1_2;
