@@ -24,7 +24,7 @@ public class Wiorkflowcontrol {
     public static void another(){
 
         Scanner scanner= new Scanner(System.in);
-       // int age=scanner
+     int age=scanner.nextInt();
         if((age<10)&&(age>0))
         System.out.println("kid");
         if((age>10)&& (age<20))
