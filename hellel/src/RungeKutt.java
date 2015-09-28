@@ -17,7 +17,6 @@ public class RungeKutt {
             y0_2 = y1_2;
             y0_3 = y1_3;
         }
-
     }
 
     public static double rungekutt1(double h, double y0, double x0) {

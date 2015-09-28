@@ -5,7 +5,7 @@ public class Homework2 {
         System.out.println("Selecting one of the programs:");
         System.out.println("1.Program checks whether an even integer or odd");
         System.out.println("2 Program that displays on the screen closest to the 10 of the two numbers");
-        System.out.println("3.program that calculates the sides of the rectangle , if you know the area and perimeter");
+        System.out.println("3.program that calculates the sides of the rectangle, if you enter the area and perimeter");
         Scanner enter = new Scanner(System.in);
         int n = enter.nextInt();
         if (n == 1) {
