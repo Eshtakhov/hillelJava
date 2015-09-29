@@ -28,6 +28,7 @@ public class Calculator {
                     break;
                 case 4:
                     stop=false;
+                    break;
                 default:
                     System.out.println("Input Error ");
                     break;
