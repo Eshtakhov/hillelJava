@@ -3,8 +3,7 @@ import java.util.Scanner;
 
 public class ArrayHomeWork {
     public static void main(String[] args) {
-        boolean stop = true;
-        while (stop) {
+        while (true) {
             System.out.println("Selecting one of the function");
             System.out.println("1. Deposit");
             System.out.println("2. Telegraph");
@@ -27,8 +26,7 @@ public class ArrayHomeWork {
                     guessnumder();
                     break;
                 case 5:
-                    stop = false;
-                    break;
+                    return;
                 default:
                     System.out.println("Input Error ");
                     break;
@@ -59,7 +57,7 @@ public class ArrayHomeWork {
     private static void tickets() {
         int counter = 0;
         for (int i = 100000; i < 1000000; i++) {
-            if (i / 100000 % 10 + i / 10000 % 10 + i / 1000 % 10 == i / 100 % 10 + i / 10 % 10 + i % 10) {
+            if ((i / 100000 % 10 + i / 10000 % 10 + i / 1000 % 10) == (i / 100 % 10 + i / 10 % 10 + i % 10)) {
                 counter++;
             }
         }
@@ -86,17 +84,16 @@ public class ArrayHomeWork {
         int month = enter.nextInt();
         int counter = 0;
         double amount = sum;
-        while (counter < month) {
+        for(counter=0;counter<month;counter++) {
             amount = amount * (0.03 / 12) + amount;
-            counter++;
         }
         System.out.printf("Amount will be %.2f after %d month\n", amount, month);
         amount = 0;
         month = 0;
-        do {
+        while (amount < sum){
             amount = sum * 0.03 / 12 + amount;
             month++;
-        } while (amount < sum);
+        }
         System.out.printf("After %.1f  year deposit exceeded amount\n ", month / 12.0);
     }
 }
