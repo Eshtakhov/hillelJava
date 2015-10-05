@@ -40,18 +40,19 @@ public class ArrayHomeWork {
         Random random = new Random();
         int number = random.nextInt(500);
         Scanner enter = new Scanner(System.in);
-        while (true) {
+        boolean flag =true;
+        do {
             System.out.println("enter your number");
             int trynumber = enter.nextInt();
             if (trynumber == number) {
                 System.out.println("You guessed");
-                break;
+                flag=false;
             } else if (trynumber < number) {
                 System.out.println("Your number is less than the number of tasks");
             } else if (trynumber > number) {
                 System.out.println("Your number is greater than the number of tasks");
             }
-        }
+        }while(flag);
     }
 
     private static void tickets() {
