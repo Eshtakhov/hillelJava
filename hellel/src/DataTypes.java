@@ -1,8 +1,6 @@
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 
-/**
- * Created by ES on 21.09.2015.
- */
+
 public class DataTypes {
     public static void main(String[] args) {
         byte b=120;

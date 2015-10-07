@@ -2,9 +2,7 @@ import jdk.nashorn.internal.runtime.regexp.joni.ScanEnvironment;
 
 import java.util.Scanner;
 
-/**
- * Created by shah on 29.09.2015.
- */
+
 public class Calculator {
     public static void main(String[] args) {
         boolean stop = true;
@@ -104,7 +102,6 @@ public class Calculator {
             System.out.printf("Type of the number %.0f is Long\n", number);
         } else
             System.out.printf("Type of the number %.0f is Double\n", number);
-
     }
 
     private static void realnumbers() {
@@ -125,8 +122,6 @@ public class Calculator {
             default:
                 System.out.println("Input Error ");
                 break;
-
-
         }
     }
 }
