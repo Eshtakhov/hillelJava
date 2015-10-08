@@ -34,25 +34,23 @@ public class ArrayHomeWork {
         }
     }
 
-
-
     private static void guessnumder() {
         Random random = new Random();
         int number = random.nextInt(500);
         Scanner enter = new Scanner(System.in);
-        boolean flag =true;
+        boolean flag = true;
         do {
             System.out.println("enter your number");
             int trynumber = enter.nextInt();
             if (trynumber == number) {
                 System.out.println("You guessed");
-                flag=false;
+                flag = false;
             } else if (trynumber < number) {
                 System.out.println("Your number is less than the number of tasks");
             } else if (trynumber > number) {
                 System.out.println("Your number is greater than the number of tasks");
             }
-        }while(flag);
+        } while (flag);
     }
 
     private static void tickets() {
@@ -85,13 +83,13 @@ public class ArrayHomeWork {
         int month = enter.nextInt();
         int counter = 0;
         double amount = sum;
-        for(counter=0;counter<month;counter++) {
+        for (counter = 0; counter < month; counter++) {
             amount = amount * (0.03 / 12) + amount;
         }
         System.out.printf("Amount will be %.2f after %d month\n", amount, month);
         amount = 0;
         month = 0;
-        while (amount < sum){
+        while (amount < sum) {
             amount = sum * 0.03 / 12 + amount;
             month++;
         }
