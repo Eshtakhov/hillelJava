@@ -11,22 +11,22 @@ public class Encryption {
         System.out.println("Enter string for encryption");
         String string = enter.nextLine();
         Scrambler encryption = new Scrambler(key);
-        String messageencoding = encryption.crypt(string);
-        System.out.println(messageencoding);
+        String messageEncoding = encryption.crypt(string);
+        System.out.println(messageEncoding);
         System.out.println("If you want to decrypt the message press 1");
         System.out.println("If you want to encrypt an other message message press 2");
         System.out.println("If you want to exit press 3");
         int n = enter.nextInt();
         switch (n) {
             case 1: {
-                messageencoding = encryption.crypt(string);
-                System.out.println(messageencoding);
+                messageEncoding = encryption.crypt(string);
+                System.out.println(messageEncoding);
             }
             case 2: {
                 System.out.println("Enter string for encryption");
-                String otherstring = enter.nextLine();
-                otherstring = encryption.crypt(otherstring);
-                System.out.println(otherstring);
+                String otherString = enter.nextLine();
+                otherString = encryption.crypt(otherString);
+                System.out.println(otherString);
             }
             case 3: {
                 return;
