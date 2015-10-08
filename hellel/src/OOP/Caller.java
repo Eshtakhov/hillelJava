@@ -1,17 +1,19 @@
+package OOP;
+
 /**
  * Created by ES on 05.10.2015.
  */
 public class Caller {
     public static void main(String[] args) {
-        if(Cat.predoctor)
-            System.out.println("Cat is predator");
-        Cat tomcat= new Cat(true,3,"Tom","Grey");
+      /*  if(OOP.Animal.Cat.predoctor)
+         //   System.out.println("OOP.Animal.OOP.Animal.Cat is predator");
+        OOP.Animal.Cat tomcat= new OOP.Animal.Cat(true,3,"Tom","Grey");
         //tomcat.init(true,3,"Tom","Grey");
 
 
 
 
-        Cat murzik=new Cat(true,4,"Murzik","Black");
+        OOP.Animal.Cat murzik=new OOP.Animal.Cat(true,4,"Murzik","Black");
        // murzik.init(true,4,"Murzik","Black");
 
 
@@ -24,5 +26,5 @@ public class Caller {
         OOP.printScipt();
         OOP.sharedstring="yahoo";
         OOP.printScipt();
-    }
+    }*/}
 }

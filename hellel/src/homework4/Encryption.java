@@ -10,7 +10,7 @@ public class Encryption {
         String key = enter.nextLine();
         System.out.println("Enter string for encryption");
         String string = enter.nextLine();
-        Scrambler encryption = new Scrambler(key);
+        Scarmbler encryption = new Scarmbler(key);
         String messageEncoding = encryption.crypt(string);
         System.out.println(messageEncoding);
         System.out.println("If you want to decrypt the message press 1");
