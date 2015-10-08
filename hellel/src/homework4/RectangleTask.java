@@ -6,8 +6,7 @@ package homework4;
 public class RectangleTask {
     private double square;
     private double perimeter;
-    private double a;
-    private double b;
+
 
     public RectangleTask(double sq, double pr) {
         square = sq;
@@ -15,22 +14,16 @@ public class RectangleTask {
     }
 
     public boolean hasSolution() {
-        if (Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square) > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square) > 0;
     }
 
     public Rectangle getRectangle() {
         if (hasSolution()) {
-            b = (perimeter / 2 + Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square)) / 2;
-            a = square / b;
+            double b = (perimeter / 2 + Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square)) / 2;
+            double a = square / b;
             Rectangle rectangle= new Rectangle(a, b);
                 return rectangle;
-
             }
-
          else
             return null;
     }

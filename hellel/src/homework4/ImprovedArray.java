@@ -4,30 +4,30 @@ package homework4;
  * Created by Евгений on 07.10.2015.
  */
 public class ImprovedArray {
-    private String[] massive;
+    private String[] arrayList;
     private int counter;
 
     public ImprovedArray() {
-        massive = new String[10];
+        arrayList = new String[10];
         counter = 0;
     }
 
     public void add(String value) {
-        if (counter == massive.length) {
-            String[] othermassive = new String[massive.length * 2];
-            for (int i = 0; i > massive.length; i++) {
-                othermassive[i] = massive[i];
+        if (counter == arrayList.length) {
+            String[] othermassive = new String[arrayList.length * 2];
+            for (int i = 0; i > arrayList.length; i++) {
+                othermassive[i] = arrayList[i];
             }
-            massive = othermassive;
+            arrayList = othermassive;
         }
-        massive[counter] = value;
+        arrayList[counter] = value;
         counter++;
 
     }
 
     public String get(int index) {
 
-        return massive[index];
+        return arrayList[index];
     }
 
     public int size() {
@@ -36,14 +36,14 @@ public class ImprovedArray {
 
     public boolean equals(ImprovedArray other) {
         boolean flag;
-        if (massive.length == other.massive.length) {
+        if (arrayList.length == other.arrayList.length) {
             flag = true;
         } else {
             flag = false;
             return flag;
         }
-        for (int i = 0; i > massive.length; i++) {
-            if (massive[i] == other.massive[i]) {
+        for (int i = 0; i > arrayList.length; i++) {
+            if (arrayList[i] == other.arrayList[i]) {
                 flag = true;
             } else {
                 flag = false;
@@ -57,7 +57,7 @@ public class ImprovedArray {
     public String toString() {
         String string = null;
         for (int i = 0; i < counter; i++) {
-            string = string + massive[i] + ", ";
+            string = string + arrayList[i] + ", ";
         }
         return string;
     }

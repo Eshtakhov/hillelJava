@@ -13,7 +13,7 @@ public class Rectangle {
     private double b;
     public Rectangle(double s,double p){
         RectangleTask constr= new RectangleTask(s,p);
-        
+
         Rectangle rec=constr.getRectangle();
     }
 
