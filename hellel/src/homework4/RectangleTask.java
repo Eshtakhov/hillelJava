@@ -10,17 +10,8 @@ public class RectangleTask {
     private double b;
 
     public RectangleTask(double sq, double pr) {
-        if (sq > 0) {
-            square = sq;
-        } else {
-            System.out.println("Wrong square");
-        }
-        if (pr > 0) {
-            perimeter = pr;
-        } else {
-            System.out.println("Wrong perimeter");
-        }
-
+        square = sq;
+        perimeter = pr;
     }
 
     public boolean hasSolution() {
@@ -35,21 +26,12 @@ public class RectangleTask {
         if (hasSolution()) {
             b = (perimeter / 2 + Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square)) / 2;
             a = square / b;
-            Rectangle rectangle = new Rectangle(a, b);
-            if ((b > 0) && (a > 0)) {
+            Rectangle rectangle= new Rectangle(a, b);
                 return rectangle;
-            } else {
-                b = (perimeter / 2 - Math.sqrt(Math.pow(perimeter, 2) / 4 - 4 * square)) / 2;
-                a = square / b;
-                if ((b > 0) && (a > 0)) {
-                    return rectangle;
-                } else {
-                    return null;
-                }
 
             }
 
-        }
-        else return null;
+         else
+            return null;
     }
 }
