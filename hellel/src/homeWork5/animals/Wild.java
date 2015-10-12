@@ -3,7 +3,7 @@ package homeWork5.animals;
 /**
  * Created by Евгений on 12.10.2015.
  */
-public class Wild extends animal {
+public abstract class Wild extends animal {
     public boolean isPredator;
 
     @Override

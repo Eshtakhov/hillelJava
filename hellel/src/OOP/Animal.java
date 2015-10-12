@@ -31,6 +31,12 @@ public class Animal {
             return true;
         }
 
+        public String getSound() {
+            return null;
+        }
+
+
+
     }
 
     public static class OOP {

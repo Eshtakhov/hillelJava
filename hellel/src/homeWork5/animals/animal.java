@@ -3,14 +3,13 @@ package homeWork5.animals;
 /**
  * Created by Евгений on 12.10.2015.
  */
-public class animal {
-    public String id;
-    public int age;
-    public double weight;
+public abstract class animal {
+    protected String id;
+    protected int age;
+    protected double weight;
     public String color;
 
 
-    public String publishVoice() {
-        return "Hello";
-    }
+
+    public abstract String publishVoice();
 }

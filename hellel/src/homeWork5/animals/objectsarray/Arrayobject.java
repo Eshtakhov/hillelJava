@@ -49,7 +49,7 @@ public class Arrayobject {
             return flag;
         }
         for (int i = 0; i > arrayList.length; i++) {
-            if (arrayList[i] == other.arrayList[i]) {
+            if (arrayList[i].equals(other.arrayList[i])) {
                 flag = true;
             } else {
                 flag = false;
@@ -62,7 +62,7 @@ public class Arrayobject {
 
     public boolean contains(Object obj) {
         for (int i = 0; i < counter; i++) {
-            if (obj == arrayList[i]) return true;
+            if (arrayList[i].equals(obj)) return true;
         }
         return false;
 
