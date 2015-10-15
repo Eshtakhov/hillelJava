@@ -6,13 +6,13 @@ import java.util.Arrays;
  * Created by ES on 08.10.2015.
  */
 public class Animal {
-    public static class Cat extends Animal1 {
+   /* public static class Cat extends Animal1 {
         public static final boolean domestic=true;
         public static final boolean predoctor= true;
 
-        boolean pet;
+        boolean pet;*/
         String color;
-        public Cat(){
+      /*  public Cat(){
 
         }
 
@@ -37,7 +37,7 @@ public class Animal {
 
 
 
-    }
+    }*/
 
     public static class OOP {
         static String sharedstring;//поле класса
