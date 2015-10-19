@@ -12,8 +12,11 @@ public class Sorted {
         for(int i=0;i<array.length;i++)
             for(int j=i;j<array.length;i++)
         {
-            if (array[j] > array[j + 1]) {
-                int min = array[j];
+            Integer first=array[i];
+            Integer second=array[j];
+            int g=first.compareTo(second);
+            if (g > 0) {
+                Integer min = array[j];
                 array[j] = array[j + 1];
                 array[j + 1] = min;
             }
