@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Created by Евгений on 19.10.2015.
  */
 public class SortingAnArray {
-    public void sortjne(int[] massive) {
+    public void sortOne(int[] massive) {
         for (int i = massive.length - 1; i > 0; i--) {
             for (int j = 0; j < i; j++) {
                 if (massive[j] > massive[j + 1]) {
