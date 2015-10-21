@@ -4,13 +4,15 @@ package homeworkAbstrackInterface;
  * Created by Евгений on 14.10.2015.
  */
 public class GreenPaint extends Paint {
-    private  String color="green";
 
-    public String getColor(){
+    @Override
+    public String getColor() {
 
-        return color;
+        return "green";
     }
-    public double paintConsumption(){
+
+    @Override
+    public double paintConsumption() {
         return 0.2;
     }
 }
