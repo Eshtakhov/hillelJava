@@ -29,7 +29,7 @@ public class Parallelogram extends Figure implements PaintingFigure {
 
 
     @Override
-    public double area() {
+    public Double area() {
 
         return Math.sin(alfa) * a * b;
     }

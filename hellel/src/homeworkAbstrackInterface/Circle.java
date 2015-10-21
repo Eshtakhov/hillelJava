@@ -26,7 +26,7 @@ public class Circle extends Figure implements PaintingFigure {
 
 
     @Override
-    public double area() {
+    public Double area() {
         return Math.PI * radius * radius;
     }
 

@@ -28,7 +28,7 @@ public class Rectangle extends Figure implements PaintingFigure {
 
 
     @Override
-    public double area() {
+    public Double area() {
         return a * b;
     }
 

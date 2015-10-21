@@ -27,7 +27,7 @@ public class Square extends Figure implements PaintingFigure {
 
 
     @Override
-    public double area() {
+    public Double area() {
         return a * a;
     }
 

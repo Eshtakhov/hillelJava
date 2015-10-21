@@ -28,7 +28,7 @@ public class Triangle extends Figure implements PaintingFigure {
     }
 
     @Override
-    public double area() {
+    public Double area() {
         double p = perimetre() / 2;
         return Math.abs(p * (p - a) * (p - b) * (p - c));
     }

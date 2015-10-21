@@ -28,7 +28,7 @@ public class Ellipse extends Figure implements PaintingFigure {
 
 
     @Override
-    public double area() {
+    public Double area() {
 
         return Math.PI * radSmall * radBig;
     }

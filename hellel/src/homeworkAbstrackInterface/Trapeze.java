@@ -31,7 +31,7 @@ public class Trapeze extends Figure implements PaintingFigure {
     }
 
     @Override
-    public double area() {
+    public Double area() {
 
         return (a + b) / 2 * Math.abs(Math.pow(c, 2) - (Math.pow(a - b, 2) + Math.pow(c, 2)
                 - Math.pow(d, 2)) / (2 * (a - b)));
