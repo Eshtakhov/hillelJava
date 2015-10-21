@@ -5,20 +5,17 @@ package homeWork5.animals;
  */
 public class Dog extends Menage {
 
-    public Dog(){};
+    public Dog(){
+        super();
+    };
 
-    public Dog(String id, int age, double weight, String color, String name) {
-        this.id = id;
-        this.age = age;
-        this.weight = weight;
-        this.color = color;
-        this.name = name;
-        isVactinated = true;
+    public Dog(String id, int age, double weight, String color, String name,boolean isVactinated) {
+        super(id, age, weight, color,name,isVactinated);
     }
 
     @Override
     public String publishVoice() {
-        String string = "Hello, my name is " + name + "\n" + "Woof";
+        String string = "Hello, my name is " + this.getName() + "\n" + "Woof";
         return string;
 
     }

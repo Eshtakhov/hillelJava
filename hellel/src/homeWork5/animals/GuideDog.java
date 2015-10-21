@@ -6,16 +6,16 @@ package homeWork5.animals;
 public class GuideDog extends Menage {
     private boolean isTrained;
 
-    public GuideDog(String id, int age, double weight, String color, String name,boolean isTrained) {
-        this.id = id;
-        this.age = age;
-        this.weight = weight;
-        this.color = color;
-        this.name = name;
-        isVactinated = true;
-        this.isTrained=isTrained;
+    public GuideDog(){
+
     }
-    public boolean comeHome(){
+
+    public GuideDog(String id, int age, double weight, String color, String name, boolean isVactinated, boolean isTrained) {
+        super(id, age, weight, color, name, isVactinated);
+        this.isTrained = isTrained;
+    }
+
+    private boolean comeHome() {
         if (isTrained) return true;
         else return false;
     }
@@ -23,14 +23,15 @@ public class GuideDog extends Menage {
 
     @Override
     public String publishVoice() {
-        if(comeHome()){
-        String string = "Hello, my name is " + name + "\n" + "I can take you home";
-        return string;}
-        else {
-            String string = "Hello, my name is " + name + "\n" ;
-            return string;}
+        if (comeHome()) {
+            String string = "Hello, my name is " + this.getName() + "\n" + "I can take you home"+"\n" + "Woof";
+            return string;
+        } else {
+            String string = "Hello, my name is " + this.getName() + "\n" + "Woof"+"\n";
+            return string;
         }
-
     }
+
+}
 
 

@@ -5,21 +5,19 @@ package homeWork5.animals;
  */
 public class Cat extends Menage {
 
-    public Cat(){}
+    public Cat() {
+        super();
+    }
 
-    public Cat(String id, int age, double weight, String color, String name) {
-        this.id = id;
-        this.age = age;
-        this.weight = weight;
-        this.color = color;
-        this.name = name;
-        isVactinated = true;
+    public Cat(String id, Integer age, double weight, String color, String name,boolean isVactinated) {
+        super(id, age, weight, color,name,isVactinated);
+
     }
 
 
     @Override
     public String publishVoice() {
-        String string = "Hello, my name is " + name + "\n" + "Meow";
+        String string = "Hello, my name is " + getName() + "\n" + "Meow";
         return string;
 
     }
