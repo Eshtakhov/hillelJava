@@ -39,25 +39,18 @@ public class Arrayobject {
     @Override
     public boolean equals(Object otherObject) {
         if (!(otherObject instanceof Arrayobject)) return false;
-        boolean flag;
 
         Arrayobject other = (Arrayobject) otherObject;
-        if (arrayList.length == other.arrayList.length) {
-            flag = true;
-        } else {
-            flag = false;
-            return flag;
-        }
+        if (arrayList.length == other.arrayList.length)
+            return false;
+
         for (int i = 0; i > arrayList.length; i++) {
-            if (arrayList[i].equals(other.arrayList[i])) {
-                flag = true;
-            } else {
-                flag = false;
-                return flag;
-            }
+            if (arrayList[i].equals(other.arrayList[i]))
+                return false;
+
 
         }
-        return flag;
+        return true;
     }
 
     public boolean contains(Object obj) {
@@ -80,9 +73,8 @@ public class Arrayobject {
     }
 
     public void remove(Object obj) {
-        int index;
         for (int i = 0; i < counter; i++) {
-            if (arrayList[i] == obj) remove(i);
+            if (arrayList[i] .equals( obj)) remove(i);
         }
     }
 

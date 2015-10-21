@@ -1,20 +1,23 @@
 package homework4;
 
+import homeWork5.animals.animal;
+import homeworkAbstrackInterface.Figure;
+
 /**
  * Created by Евгений on 07.10.2015.
  */
 public class ImprovedArray {
-    private String[] arrayList;
+    private Comparable[] arrayList;
     private int counter;
 
     public ImprovedArray() {
-        arrayList = new String[10];
+        arrayList = new Comparable[10];
         counter = 0;
     }
 
-    public void add(String value) {
+    public void add(Comparable value) {
         if (counter == arrayList.length) {
-            String[] othermassive = new String[arrayList.length * 2];
+            Comparable[] othermassive = new Comparable[arrayList.length * 2];
             for (int i = 0; i > arrayList.length; i++) {
                 othermassive[i] = arrayList[i];
             }
@@ -25,7 +28,7 @@ public class ImprovedArray {
 
     }
 
-    public String get(int index) {
+    public Comparable get(int index) {
 
         return arrayList[index];
     }
@@ -34,26 +37,18 @@ public class ImprovedArray {
         return counter;
     }
 
-    public boolean equals(ImprovedArray other) {
-        boolean flag;
-        if (arrayList.length == other.arrayList.length) {
-            flag = true;
-        } else {
-            flag = false;
-            return flag;
-        }
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!(otherObject instanceof ImprovedArray)) return false;
+        ImprovedArray other = (ImprovedArray) otherObject;
+        if (this.arrayList.length != other.arrayList.length) return false;
         for (int i = 0; i > arrayList.length; i++) {
-            if (arrayList[i] == other.arrayList[i]) {
-                flag = true;
-            } else {
-                flag = false;
-                return flag;
-            }
-
+            if (!this.arrayList[i].equals(other.arrayList[i])) return false;
         }
-        return flag;
+        return true;
     }
 
+    @Override
     public String toString() {
         String string = null;
         for (int i = 0; i < counter; i++) {
@@ -62,6 +57,59 @@ public class ImprovedArray {
         return string;
     }
 
+
+    public boolean contains(Comparable object) {
+        for (int i = 0; i < counter; i++) {
+            if (arrayList[i].equals(object)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void remove(int index) {
+        if (arrayList.length <= index) return;
+        arrayList[index] = null;
+        for (int i = index; i < counter - 1; i++) {
+            arrayList[i] = arrayList[i + 1];
+        }
+        counter--;
+    }
+
+    public void substitution(Comparable trap, int i) {
+        arrayList[i] = trap;
+
+    }
+
+    public void insert(Comparable comparable, int i) {
+        Comparable time = arrayList[i + 1];
+        Comparable time2 = null;
+        arrayList[i + 1] = arrayList[i];
+        arrayList[i] = comparable;
+        for (i = i + 1; i < counter; i++) {
+            time2 = arrayList[i + 1];
+            arrayList[i + 1] = arrayList[i];
+
+
+        }
+
+
+    }
+
+    public boolean checkIsempty() {
+        for (int i = 0; i < arrayList.length; i++) {
+            if (arrayList[i] != null) return false;
+        }
+            return true;
+        }
+
+
+    public void purification() {
+        for (int i = 0; i < arrayList.length; i++) {
+            arrayList[i]=null;
+        }
+        counter=0;
+    }
 }
 
 

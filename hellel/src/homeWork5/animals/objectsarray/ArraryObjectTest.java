@@ -16,7 +16,7 @@ public class ArraryObjectTest {
         example.add("example 2");
         Cat catexample = new Cat(false, 3, "tom", "Grey");
         Cat cat = new Cat();
-        Dog dog = new Dog("212", 5, 23, "Brown", "rex");
+        Dog dog = new Dog("212", 5, 23, "Brown", "rex",true);
         example.add(cat);
         example.add(catexample);
         example.add(dog);
