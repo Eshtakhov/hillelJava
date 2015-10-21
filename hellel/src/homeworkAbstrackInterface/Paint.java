@@ -15,4 +15,14 @@ public abstract class Paint implements Comparable{
 
     }
 
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!(otherObject instanceof Paint)) return false;
+        Paint other = (Paint) otherObject;
+        if (this.paintConsumption() != other.paintConsumption()) return false;
+        if (!this.getColor().equals(other.getColor())) return false;
+        return true;
+
+    }
+
 }

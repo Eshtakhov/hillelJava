@@ -35,4 +35,13 @@ public class Circle extends Figure implements PaintingFigure {
         return 2 * Math.PI * radius;
 
     }
+    @Override
+    public boolean equals(Object otherObject) {
+        if(!super.equals(otherObject))return false;
+        if (!(otherObject instanceof Circle)) return false;
+        Circle other = (Circle) otherObject;
+        if (this.radius != other.radius) return false;
+        return true;
+
+    }
 }

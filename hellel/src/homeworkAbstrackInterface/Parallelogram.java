@@ -39,4 +39,16 @@ public class Parallelogram extends Figure implements PaintingFigure {
         return (a + b) * 2;
     }
 
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!super.equals(otherObject)) return false;
+        if (!(otherObject instanceof Parallelogram)) return false;
+        Parallelogram other = (Parallelogram) otherObject;
+        if (this.a != other.a) return false;
+        if (this.b != other.b) return false;
+        if (this.alfa != other.alfa) return false;
+        return true;
+
+    }
+
 }

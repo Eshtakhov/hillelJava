@@ -41,4 +41,17 @@ public class Trapeze extends Figure implements PaintingFigure {
     public double perimetre() {
         return (a + b + c + d);
     }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!super.equals(otherObject)) return false;
+        if (!(otherObject instanceof Trapeze)) return false;
+        Trapeze other = (Trapeze) otherObject;
+        if (this.a != other.a) return false;
+        if (this.b != other.b) return false;
+        if (this.c != other.c) return false;
+        if (this.d != other.d) return false;
+        return true;
+
+    }
 }

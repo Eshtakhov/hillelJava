@@ -37,4 +37,15 @@ public class Ellipse extends Figure implements PaintingFigure {
     public double perimetre() {
         return 4 * (Math.PI * radBig * radSmall + Math.pow(radBig - radSmall, 2)) / (radSmall + radBig);
     }
+    @Override
+    public boolean equals(Object otherObject) {
+        if(!super.equals(otherObject))return false;
+        if (!(otherObject instanceof Ellipse)) return false;
+        Ellipse other = (Ellipse) otherObject;
+        if (this.radBig != other.radBig) return false;
+        if (this.radSmall != other.radSmall) return false;
+        return true;
+
+    }
 }
+

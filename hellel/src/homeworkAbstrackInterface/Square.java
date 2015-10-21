@@ -34,6 +34,15 @@ public class Square extends Figure implements PaintingFigure {
     @Override
     public double perimetre() {
         return 4 * a;
+    }
+    @Override
+    public boolean equals(Object otherObject) {
+        if(!super.equals(otherObject))return false;
+        if (!(otherObject instanceof Square)) return false;
+        Square other = (Square) otherObject;
+        if (this.a != other.a) return false;
+        return true;
 
     }
+
 }

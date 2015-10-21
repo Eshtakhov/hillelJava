@@ -36,4 +36,15 @@ public class Rectangle extends Figure implements PaintingFigure {
     public double perimetre() {
         return 2 * (a + b);
     }
+
+    @Override
+    public boolean equals(Object otherObject) {
+        if (!super.equals(otherObject)) return false;
+        if (!(otherObject instanceof Rectangle)) return false;
+        Rectangle other = (Rectangle) otherObject;
+        if (this.a != other.a) return false;
+        if (this.b != other.b) return false;
+        return true;
+
+    }
 }
