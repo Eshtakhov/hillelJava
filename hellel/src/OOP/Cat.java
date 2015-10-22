@@ -47,6 +47,7 @@ public class Cat extends Animal1 implements Comparable<Cat> {
 
     @Override
     public int compareTo(Cat o) {
+        if(this.equals(o)) return 0;
 
         return this.getName().compareTo(o.getName());
 
