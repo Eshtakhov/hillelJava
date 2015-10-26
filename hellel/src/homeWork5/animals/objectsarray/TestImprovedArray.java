@@ -39,7 +39,7 @@ public class TestImprovedArray {
         if (array.contains(squ))
             System.out.println("Yes it's an element of array");
         else System.out.println("Error don't find the element");
-        array.remove(squ);
+      //  array.remove(squ);
         System.out.println(array.size());
         System.out.println(array.toString());
         array.remove(3);
@@ -60,7 +60,7 @@ public class TestImprovedArray {
             System.out.println("ImprovedArray is empty");
 
         } else System.out.println("ImprovedArray is not empty");
-        array.sort();
+     //   array.sort();
         System.out.println(array.toString());
 
 
