@@ -100,15 +100,44 @@ public class ImprovedArray {
         for (int i = 0; i < arrayList.length; i++) {
             if (arrayList[i] != null) return false;
         }
-            return true;
-        }
+        return true;
+    }
 
 
     public void purification() {
         for (int i = 0; i < arrayList.length; i++) {
-            arrayList[i]=null;
+            arrayList[i] = null;
         }
-        counter=0;
+        counter = 0;
+    }
+
+    public void remove(Comparable squ) {
+        for (int i = 0; i < arrayList.length; i++) {
+            if (arrayList[i].equals(squ)) {
+                this.remove(i);
+            }
+
+        }
+
+    }
+
+    public void sort() {
+        for (int i = 0; i < arrayList.length; i++) {
+            for (int j = i + 1; j < arrayList.length; j++) {
+
+                Comparable first = arrayList[i];
+                Comparable second = arrayList[j];
+
+                int g = first.compareTo(second);
+
+                if (g > 0) {
+                    Comparable temp = arrayList[i];
+                    arrayList[i] = arrayList[j];
+                    arrayList[j] = temp;
+                }
+            }
+        }
+
     }
 }
 
