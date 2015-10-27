@@ -28,9 +28,9 @@ public class TestImprovedArray {
         array.add(paral);
         array.add(cir);
         System.out.println(array.size());
+
         System.out.printf("%.2f %.2f %.2f %.2f %.2f %.2f %.2f", rect.area(), squ.area(), elli.area(), tria.area(),
                 trap.area(), paral.area(), cir.area());
-
         System.out.println(array.toString());
         animal wolf = new Wolf();
         if (array.contains(wolf)) {
