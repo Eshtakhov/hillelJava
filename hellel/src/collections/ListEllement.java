@@ -4,8 +4,8 @@ package collections;
  * Created by ES on 26.10.2015.
  */
 public class ListEllement {
-    Object value;
-    ListEllement next;
+   public Object value;
+   public ListEllement next;
 
     public ListEllement(Object value) {
         this.value = value;

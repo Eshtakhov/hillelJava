@@ -5,18 +5,22 @@ package patterns.ducks;
  */
 public abstract class Duck {
 
+    FlybeHyrear flybeHyrear;
+
+    QuackBehirear quackBehirear;
+
 
     public String qruack() {
-        return "qruack";
+        return quackBehirear.quack();
     }
 
     public abstract String display();
 
-    public  String fly(){
-        return "i'm flying";
+    public String fly() {
+        return flybeHyrear.fly();
     }
 
-    public String swim(){
+    public String swim() {
         return "i can swim";
     }
 

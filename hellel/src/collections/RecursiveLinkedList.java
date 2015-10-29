@@ -35,4 +35,8 @@ public class RecursiveLinkedList {
             return head.get(index);
         }
     }
+
+    public ListEllement getHead() {
+        return head;
+    }
 }

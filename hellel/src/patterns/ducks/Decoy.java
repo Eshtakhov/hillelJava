@@ -4,9 +4,10 @@ package patterns.ducks;
  * Created by ES on 26.10.2015.
  */
 public class Decoy extends Duck {
-    @Override
-    public String fly() {
-        return "can't fly";
+
+    public Decoy() {
+        flybeHyrear = new Fly();
+        quackBehirear = new Qrauck();
     }
 
     @Override

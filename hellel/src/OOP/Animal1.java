@@ -15,6 +15,10 @@ public abstract class Animal1 implements Vaccinable {
     public Animal1() {
     }
 
+    public int getAge() {
+        return age;
+    }
+
     public Animal1(String name, int age) {
         this.name = name;
         this.age = age;
