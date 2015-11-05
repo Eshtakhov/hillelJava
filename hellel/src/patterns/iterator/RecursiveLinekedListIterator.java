@@ -28,10 +28,12 @@ public class RecursiveLinekedListIterator implements Iterator {
 
     @Override
     public Object next() {
-        if(element ==null){
-        element=list.getHead();}
-        else {
+        if (element == null) {
+            element = list.getHead();
+        } else {
+
 
         }
+        return null;
     }
 }
