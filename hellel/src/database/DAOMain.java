@@ -5,10 +5,15 @@ package database;
  */
 public class DAOMain {
     public static void main(String[] args) {
-        ProductDAO productDAO =new ProductdbDAO();
+        String daoType = args[0];
+        ProductDAO productDAO;
+        productDAO = ProductDAOFactory.createDAO(daoType);
+        //ProductDAO productDAO =new ProductDAOXML();
         System.out.println(productDAO.findALl());
         productDAO.create(new Product(5, "Pen", "Accertiment", 10));
         System.out.println(productDAO.findById(5));
-        productDAO.deleteById(5);
+        //productDAO.deleteById(5);
     }
+
+
 }
