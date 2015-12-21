@@ -14,7 +14,11 @@ public class SingletonExample {
 
     }
     private static SingletonExample instance=new SingletonExample();
-    public static SingletonExample getInstance(){
+    public static synchronized SingletonExample getInstance(){
+        if(instance==null){
+            instance = new SingletonExample();
+
+        }
         return  instance;
     }
 
