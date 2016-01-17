@@ -7,18 +7,19 @@ import org.springframework.stereotype.Component;
 /**
  * Created by ES on 11.01.2016.
  */
-@Component
+@Component("sony")
 @Scope("prototype")
 public class CDPlayer {
-    @Autowired
-    private CD disk;
 
-    /*
-    public CDPlayer(CD disk) {
-        this.disk = disk;
+    @Autowired(required = false)
+    private CD disc;
+
+  /*  @Autowired
+    public CdPlayer(CD disc) {
+        this.disc = disc;
     }*/
 
     public void play(){
-        disk.play();
+        disc.play();
     }
 }

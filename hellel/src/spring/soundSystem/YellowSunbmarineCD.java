@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 public class YellowSunbmarineCD implements CD {
     @Override
     public void play() {
-        System.out.println("We all live in an yellow submarine....");
-
+        System.out.println("We all live in a yellow submarine...");
     }
 }
