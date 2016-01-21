@@ -50,7 +50,7 @@ public class ImprovedArray {
 
     @Override
     public String toString() {
-        String string = null;
+        String string = " ";
         for (int i = 0; i < counter; i++) {
             string = string + arrayList[i] + ", ";
         }
@@ -83,7 +83,7 @@ public class ImprovedArray {
 
     public void insert(Comparable comparable, int i) {
         Comparable time = arrayList[i + 1];
-        Comparable time2 = null;
+        Comparable time2 = null, time3 = null;
         arrayList[i + 1] = arrayList[i];
         arrayList[i] = comparable;
         for (i = i + 1; i < counter; i++) {

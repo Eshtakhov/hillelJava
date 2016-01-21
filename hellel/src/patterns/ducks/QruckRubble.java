@@ -8,6 +8,6 @@ public class QruckRubble implements QuackBehirear {
 
     @Override
     public String quack() {
-        return "Rubble Duck dorsn't Qruck";
+        return "Rubble Duck doesn't Qruck";
     }
 }
