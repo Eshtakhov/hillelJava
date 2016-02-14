@@ -1,0 +1,27 @@
+body{
+	font:11px Verdana, sans-serif;
+	color:#333333;
+}
+
+fieldset{
+	padding:10px;
+	border:1px solid #cccccc;
+	margin :300px auto;
+	width: 300px;
+	background-color: #AFA8E2;
+}
+.input{
+	border:1px solid #333333;
+	height:27px;
+	background-image:url(../images/inputbg.jpg);
+	background-repeat:	repeat-x;
+	width:300px;
+}
+.input:focus{
+	border: 2px solid blue;
+	background:none;
+	background-color:#ffffff;
+}
+label{
+	cursor:pointer;
+}

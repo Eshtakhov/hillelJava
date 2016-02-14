@@ -1,0 +1,33 @@
+body{
+    background-color: #D3DBD3;
+}
+#header{
+    font: 24px Verdana bold;
+    margin:10px;
+    padding:15px;
+    border-bottom:1px rgba(0, 0, 0, 0.99) solid;
+
+}
+#headerLabel{
+    padding: 10px 3px 3px 3px;
+    background-color:grey;
+    font:14px Verdana;
+    color:white;
+    text-align:center ;
+    float: right;
+    width: 75px;
+    height: 25px;
+}
+.links{
+    font:14px Verdana;
+    color:blue;
+    border-bottom: 1px solid blue;
+    margin:5px 10px;
+}
+#avatar{
+    float: left;
+}
+#buttons{
+
+}
+
